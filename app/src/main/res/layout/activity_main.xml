@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.inventoryapp.MainActivity">
+    tools:context="com.example.android.inventoryapp.InventoryActivity">
 
     <ListView
+        android:id="@+id/items_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/items_list"/>
+        android:layout_height="match_parent" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/add_item"
+        android:id="@+id/add_item_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="20dp">
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_add">
 
     </android.support.design.widget.FloatingActionButton>
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Items List is Empty\n\nStart by clicking the plus button\nand add the item details\nthen press Add Item button"
+        android:textAlignment="center"
+        android:textSize="20sp" />
 
 </RelativeLayout>

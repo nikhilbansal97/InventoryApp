@@ -6,8 +6,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.android.inventoryapp.InventoryContract.InventoryEntry;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
-
 /**
  * Created by NIKHIL on 05-03-2017.
  */
@@ -26,13 +24,14 @@ public class InventoryDbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         String CREATE_QUERY = "CREATE TABLE " + InventoryEntry.TABLE_NAME + " (" +
-                InventoryEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT" +
+                InventoryEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 InventoryEntry.COLUMN_NAME + " TEXT NOT NULL," +
-                InventoryEntry.COLUMN_QUANTITY + " INTEGER NOT NULL DEFAULT 2," +
+                InventoryEntry.COLUMN_QUANTITY + " INTEGER DEFAULT 2," +
                 InventoryEntry.COLUMN_PRICE + " INTEGER NOT NULL," +
-                InventoryEntry.COLUMN_SUPPLIER_NAME + " TEXT NOT NULL UNIQUE," +
+                InventoryEntry.COLUMN_SUPPLIER_NAME + " TEXT NOT NULL," +
                 InventoryEntry.COLUMN_SUPPLIER_PHONE + " INTEGER NOT NULL," +
-                InventoryEntry.COLUMN_SUPPLIER_EMAIL + " TEXT NOT NULL";
+                InventoryEntry.COLUMN_IMAGE_URL + " BLOB," +
+                InventoryEntry.COLUMN_SUPPLIER_EMAIL + " TEXT NOT NULL);";
 
         db.execSQL(CREATE_QUERY);
     }
