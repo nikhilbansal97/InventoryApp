@@ -7,145 +7,169 @@
     tools:context="com.example.android.inventoryapp.EditorActivity">
 
     <TextView
+        android:id="@+id/item_name"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:id="@+id/item_name"
-        android:text="Name : "
-        android:textSize="25sp"
-        android:textColor="#388E3C"
-        android:textStyle="bold"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="10dp"/>
+        android:text="Name : "
+        android:textColor="#388E3C"
+        android:textSize="23sp"
+        android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/name_edit_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/name_edit_view"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@id/item_name"/>
+        android:layout_toRightOf="@id/item_name" />
 
     <TextView
+        android:id="@+id/quantity"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:id="@+id/quantity"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:textColor="#388E3C"
-        android:text="Quantity : "
-        android:layout_marginTop="10dp"
         android:layout_below="@id/item_name"
-        android:layout_marginStart="10dp"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Quantity : "
+        android:textColor="#388E3C"
+        android:textSize="23sp"
+        android:textStyle="bold" />
 
     <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:text="+"
         android:id="@+id/add_button"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_below="@id/name_edit_view"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@id/quantity" />
+        android:layout_toRightOf="@id/quantity"
+        android:text="+" />
 
     <TextView
         android:id="@+id/quantity_int"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
         android:layout_below="@id/name_edit_view"
-        android:layout_toRightOf="@id/add_button"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:text="0"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/add_button"
+        android:text="0"
+        android:textSize="22sp" />
 
     <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:text="-"
-        android:layout_marginTop="10dp"
         android:id="@+id/sub_button"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_below="@id/name_edit_view"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/quantity_int"
-        />
+        android:text="-" />
 
     <TextView
+        android:id="@+id/price"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:id="@+id/price"
-        android:textSize="25sp"
-        android:text="Price : "
-        android:textStyle="bold"
-        android:textColor="#388E3C"
         android:layout_below="@id/quantity"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp"
+        android:text="Price : "
+        android:textColor="#388E3C"
+        android:textSize="23sp"
+        android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/price_int"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/price_int"
         android:layout_below="@id/add_button"
-        android:layout_toRightOf="@id/price"/>
+        android:layout_toRightOf="@id/price"
+        android:inputType="number" />
 
     <TextView
+        android:id="@+id/supplier_name"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:id="@+id/supplier_name"
-        android:textSize="25sp"
-        android:textColor="#388E3C"
-        android:text="Supplier : "
-        android:textStyle="bold"
         android:layout_below="@id/price"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp"
+        android:text="Supplier : "
+        android:textColor="#388E3C"
+        android:textSize="23sp"
+        android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/supplier_name_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"
-        android:id="@+id/supplier_name_edit"
         android:layout_below="@id/price_int"
         android:layout_marginTop="5dp"
-        android:layout_toRightOf="@id/price"/>
+        android:layout_toRightOf="@id/price"
+        android:hint="Name" />
 
     <EditText
+        android:id="@+id/supplier_phone_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Phone"
-        android:inputType="phone"
-        android:id="@+id/supplier_phone_edit"
         android:layout_below="@id/supplier_name_edit"
         android:layout_marginTop="5dp"
-        android:layout_toRightOf="@id/price"/>
+        android:layout_toRightOf="@id/price"
+        android:hint="Phone"
+        android:inputType="phone" />
 
     <EditText
+        android:id="@+id/supplier_email_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="abc@xyz.com"
-        android:inputType="textEmailAddress"
-        android:id="@+id/supplier_email_edit"
         android:layout_below="@id/supplier_phone_edit"
         android:layout_marginTop="5dp"
-        android:layout_toRightOf="@id/price"/>
+        android:layout_toRightOf="@id/price"
+        android:hint="abc@xyz.com"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/image_item"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/supplier_email_edit"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Image :"
+        android:textColor="#388E3C"
+        android:textSize="23dp"
+        android:textStyle="bold" />
 
     <Button
+        android:id="@+id/image_url_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/supplier_email_edit"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/image_item"
+        android:text="Capture" />
+
+    <Button
+        android:id="@+id/add_item_editor"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/Base.Widget.AppCompat.Button.Colored"
-        android:text="Add Item"
-        android:padding="15dp"
-        android:textSize="18sp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_margin="15dp"/>
+        android:layout_margin="15dp"
+        android:padding="15dp"
+        android:text="Add Item"
+        android:textSize="18sp" />
 
     <Button
+        android:id="@+id/order_more"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ORDER MORE"
-        style="@style/Base.Widget.AppCompat.Button.Colored"
-        android:padding="15dp"
-        android:textSize="18dp"
         android:layout_alignParentBottom="true"
-        android:layout_margin="15dp"/>
+        android:layout_margin="15dp"
+        android:padding="15dp"
+        android:text="ORDER MORE"
+        android:textSize="18dp" />
+
 
 </RelativeLayout>
